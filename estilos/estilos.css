@@ -1,0 +1,287 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: linear-gradient(to bottom, rgb(192, 135, 170), rgb(235, 177, 213));
+    color: black;
+}
+
+p{
+        animation-duration: 1.5s;
+        animation-name: aparecer;
+        animation-iteration-count: 1;
+       }
+       @keyframes aparecer {
+        0% {
+        opacity: 0;
+        }
+        100% {
+        opacity: 1;
+        }
+       
+}
+
+.imagenHover{
+    transform: perspective(500px);
+    transition-property: all;
+}
+
+.contenedor {
+    width: 100%;
+
+    margin: 0 auto;
+    display: grid;
+    gap: 20px;
+
+    grid-template-areas: "header header header"
+        "contenido contenido sidebar"
+        "contenido contenido sidebar"
+        "footer footer footer";
+
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(4, auto);
+}
+
+    
+
+.contenedor .header {
+    grid-area: header;
+    background-color: rgb(200, 159, 163);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 0;
+
+
+}
+
+
+
+.contenedor .contenido {
+    grid-area: contenido;
+    background-color: rgb(200, 159, 163);
+    margin: 0 auto;
+    width: 100%;
+    padding: 20px 0;
+
+}
+
+.contenido>h1,
+p {
+    padding: 20px;
+}
+
+.contenedor .sidebar {
+    grid-area: sidebar;
+    background-color: rgb(219, 179, 177);
+    width: 100%;
+    padding: 20px 0;
+
+}
+
+
+
+.sidebar>h3 {
+    padding: 20px;
+    transform: scale(2,1);
+
+}
+
+.contenedor .footer {
+
+    grid-area: footer;
+    background-color: rgb(108, 83, 78);
+    justify-self: right;
+    text-align: right;
+
+    padding: 20px 0;
+    width: 100%;
+
+
+}
+
+.logo {
+    padding-left: 20px;
+}
+
+nav {
+    align-content: center;
+}
+
+ul {
+    list-style: none;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+
+}
+
+a {
+    text-decoration: none;
+    font-size: 30px;
+    padding: 0 20px;
+
+}
+
+h3 {
+    font-size: 2rem;
+
+}
+
+.gridMaestros {
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr;
+    grid-template-rows: 310px 310px;
+    grid-column-gap: 100px;
+    grid-row-gap: 100px;
+    justify-content: center;
+    padding-bottom: 150px;
+
+}
+
+.fotosMaestros {
+    width: 250px;
+    height: 250px;
+
+}
+
+@media screen and (max-width: 768px) {
+
+
+    body {
+        background-color: rgb(200, 159, 163);
+    }
+
+
+    .contenedor {
+        width: 100%;
+        display: grid;
+        grid-gap: 20px;
+
+        grid-template-areas: "header"
+            "contenido"
+            "sidebar"
+            "footer";
+
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+    }
+
+
+    .contenedor>div,
+    .contenedor .header,
+    .contenedor .contenido,
+    .contenedor .sidebar,
+    .contenedor .footer {
+        background-color: rgb(195, 176, 172);
+
+
+    }
+
+    .contenedor .header {
+        grid-area: header;
+
+        background-color: rgb(200, 159, 163);
+        justify-self: center;
+
+
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: space-between;
+
+    }
+
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    li {
+        padding: 0 15px;
+    }
+
+    .contenedor .contenido {
+        grid-area: contenido;
+
+
+
+    }
+
+    .contenedor .sidebar {
+        grid-area: sidebar;
+        background-color: rgb(195, 176, 172);
+
+    }
+
+    .contenedor .footer {
+
+        grid-area: footer;
+        background-color: rgb(108, 83, 78);
+        justify-self: center;
+        text-align: center;
+
+
+    }
+
+    @media screen and (max-width: 320px) {
+        .body {
+            background-color: brown;
+        }
+
+    }
+
+    .contenedor {
+        width: 100%;
+
+
+        display: grid;
+        grid-gap: 1rem;
+
+        grid-template-areas: "header"
+            "contenido"
+            "sidebar"
+            "footer";
+
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .contenedor .footer {
+
+        grid-area: footer;
+        background-color: rgb(108, 83, 78);
+        justify-self: center;
+        text-align: center;
+    }
+
+    .contenido>h1 {
+        color: rgb(30, 2, 56);
+
+    }
+
+    .contenido>p {
+        font-size: 2rem;
+    }
+
+
+ .body{
+     background-image: linear-gradient(to bottom, rgb(196, 107, 174), rgb(235, 123, 192));
+ }
+
+
+
+
+
+
+
+}
