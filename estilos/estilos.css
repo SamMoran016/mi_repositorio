@@ -9,7 +9,7 @@ body {
 }
 
 p{
-        animation-duration: 1.5s;
+        animation-duration: 2s;
         animation-name: aparecer;
         animation-iteration-count: 1;
        }
